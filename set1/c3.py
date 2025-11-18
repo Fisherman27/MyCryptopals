@@ -9,7 +9,7 @@ def single_byte_xor(cipher_hex:str,key:int):
     cipher_bytes = bytes.fromhex(cipher_hex)
     plain_bytes = []
     for i in range(len(cipher_bytes)): # 逐字节进行异或
-        plain_bytes.append(cipher_bytes[i]^key)
+        plain_bytes.append(cipher_bytes[i]^key) 
     plain_hex = bytes(plain_bytes).hex()
     return plain_hex
 
