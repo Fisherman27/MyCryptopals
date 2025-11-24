@@ -275,7 +275,7 @@ class AES:
 class AES_128_ECB:
     """
     AES-128-ECB加密器
-    encrypt/ decrypt:可单独使用（需额外准备blocks(list[bytes])）
+    encrypt/ decrypt:可单独使用（需额外准备text（bytes））
     """
     def __init__(self,key_bytes:bytes,Nr:int=10,Nk:int=4):
         """
@@ -298,7 +298,7 @@ class AES_128_ECB:
 
     def encrypt(self,plaintext_bytes:bytes)->bytes:
         """
-        加密,输出128字节的密文
+        加密,输出密文
         """
         blocks = self.__split_into_blocks(plaintext_bytes)
         ciphertext_blocks = []
@@ -310,7 +310,7 @@ class AES_128_ECB:
     
     def decrypt(self,ciphertext_bytes:bytes)->bytes:
         """
-        解密,输出128字节的明文
+        解密,输出明文
         """
         blocks = self.__split_into_blocks(ciphertext_bytes)
         plaintext_blocks = []
