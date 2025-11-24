@@ -8,7 +8,7 @@ root_dir = os.path.dirname(current_dir)
 sys.path.append(root_dir)
 
 
-from c7 import AES
+from set1_c7 import AES
 class AES_128_CBC:
     """
     AES-128-ECB加/解密器
@@ -65,8 +65,8 @@ class AES_128_CBC:
         plaintext = b''.join(plaintext_blocks)
         return plaintext
 
-from c9 import pkcs7_unpadding,pkcs7_padding
-from c6 import read_and_decode_cipher
+from set2_c9 import pkcs7_unpadding,pkcs7_padding
+from set1_c6 import read_and_decode_cipher
 if __name__ == '__main__':
     KEY = b'YELLOW SUBMARINE'
     BLOCK_SIZE = 16

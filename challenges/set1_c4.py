@@ -13,7 +13,7 @@ def hex_to_str(hex_string):
     bytes_data = bytes.fromhex(hex_string)
     return bytes_data.decode('utf-8', errors='ignore')
 
-from c3 import evaluate_plaintext,single_byte_xor
+from set1_c3 import evaluate_plaintext,single_byte_xor
 def _get_score(line):
     '''对line用所有可能的单字节异或进行解密，返回最高分数及对应的明文'''
     max_score = 0

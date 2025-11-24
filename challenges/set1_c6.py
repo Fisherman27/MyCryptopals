@@ -17,8 +17,8 @@ def read_and_decode_cipher(file_path: str) -> bytes:
 # method1:借助c3.py里面的方法，计算有效字符数量作为得分
 # =============================================================================
 
-from c5 import repeating_key_xor
-from c3 import single_byte_xor,evaluate_plaintext
+from set1_c5 import repeating_key_xor
+from set1_c3 import single_byte_xor,evaluate_plaintext
 def method1(cipher_hex):
     cipher_bytes = bytes.fromhex(cipher_hex)
     # 方法一：借助c3.py里面，计算有效字符数量作为得分
@@ -66,8 +66,8 @@ def method1(cipher_hex):
     print(f'Best Keysize: {BEST_KEYSIZE}, Best Key: {BEST_KEY}')
         
 
-from c5 import repeating_key_xor
-from c3 import single_byte_xor, evaluate_plaintext
+from set1_c5 import repeating_key_xor
+from set1_c3 import single_byte_xor, evaluate_plaintext
 
 def method1_by_bit(cipher_hex):
     # 将十六进制字符串转换为比特字符串（每个字节对应8位比特）

@@ -8,9 +8,9 @@ def random_series_generator(length:int)->bytes:
     """
     return bytes([random.randint(0,255) for _ in range(length)])
 
-from c9 import pkcs7_padding
-from c7 import AES_128_ECB
-from c10 import AES_128_CBC
+from set2_c9 import pkcs7_padding
+from set1_c7 import AES_128_ECB
+from set2_c10 import AES_128_CBC
 def encryption_oracle(plaintext_bytes:bytes)->bytes:
     """
     引入随机性的加密器
